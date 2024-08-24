@@ -1,0 +1,60 @@
+# Quiz Game
+
+# List of questions, choices, and correct answers
+quiz = [
+    {
+        "question": "What is the capital of France?",
+        "choices": ["A) Paris", "B) London", "C) Berlin", "D) Madrid"],
+        "answer": "A"
+    },
+    {
+        "question": "What is the largest planet in our solar system?",
+        "choices": ["A) Earth", "B) Mars", "C) Jupiter", "D) Saturn"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the smallest prime number?",
+        "choices": ["A) 0", "B) 1", "C) 2", "D) 3"],
+        "answer": "C"
+    },
+    {
+        "question": "Which language is known as the mother of all languages?",
+        "choices": ["A) Greek", "B) Sanskrit", "C) Latin", "D) English"],
+        "answer": "B"
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "choices": ["A) H2O", "B) O2", "C) CO2", "D) H2"],
+        "answer": "A"
+    }
+]
+
+# Initialize score
+score = 0
+
+# Loop through each question
+for i, q in enumerate(quiz):
+    print(f"\nQuestion {i+1}: {q['question']}")
+    for choice in q["choices"]:
+        print(choice)
+    
+    # Get the user's answer
+    answer = input("Your answer (A, B, C, D): ").upper()
+    
+    # Check if the answer is correct
+    if answer == q["answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! The correct answer is {q['answer']}.")
+    
+# Final score and feedback
+print("\nQuiz Finished!")
+print(f"Your final score is {score} out of {len(quiz)}.")
+
+if score == len(quiz):
+    print("Excellent! You got all the answers right.")
+elif score > len(quiz) // 2:
+    print("Well done! You scored above average.")
+else:
+    print("Better luck next time!")
