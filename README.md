@@ -1,1 +1,6 @@
-# CODTECH--Task1
+Name: DEVIKA SANTRE 
+Company: CODTECH IT SOLUTIONS 
+ID: CT08DS6872
+Domain: C PROGRAMMING 
+Duration: AUGUST TO SEPTEMBER 
+mentor: Neela Santhosh Kumar
